@@ -6,9 +6,7 @@ const API_HOST = "sky-scrapper.p.rapidapi.com";
 
 // Ensure API key exists
 if (!API_KEY) {
-  throw new Error(
-    "Missing VITE_RAPIDAPI_KEY. Restart the dev server after adding it."
-  );
+  throw new Error("MissingRAPIDAPI_KEY.");
 }
 
 // Axios instance for RapidAPI
