@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
+import Navbar from "./components/Navbar";
+import Flights from "./pages/Flights";
+import Hotels from "./pages/Hotel";
+import Cars from "./pages/Cars";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => (
+  <Box>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Flights />} />
+      <Route path="/hotels" element={<Hotels />} />
+      <Route path="/cars" element={<Cars />} />
+    </Routes>
+  </Box>
+);
 
 export default App;
